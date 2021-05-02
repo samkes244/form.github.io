@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+form {
+  border-radius: 8px;
+  -webkit-box-shadow: 2px 1px 2px 1px;
+          box-shadow: 2px 1px 2px 1px;
+  box-shadow: 2px 1px 2px 1px;
+  background-color: #d8f3dc;
+  margin-top: 9vh;
+  place-items: center;
+  display: -ms-grid;
+  display: grid;
+  margin-left: 30vw;
+  margin-right: 30vw;
+}
+
+input {
+  color: black;
+  outline: none;
+  padding: 9px;
+  border: none;
+  border-bottom: 2px solid black;
+  background: none;
+  height: 4vh;
+  width: 30vw;
+  margin: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+select {
+  max-width: 33vw;
+  min-width: 30vw;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 4vh;
+  margin: 20px;
+}
+
+#sub {
+  border: 2px solid black;
+  background-color: #8ae600;
+  padding-top: 12px;
+  padding-bottom: 18px;
+}
+
+.on {
+  place-items: center;
+  display: -ms-grid;
+  display: grid;
+  margin-top: 20px;
+}
+
+h2 {
+  color: #cddafd;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  background-color: #52b788;
+}
+
+@media only screen and (max-width: 910px) {
+  form {
+    margin-top: 9vh;
+    place-items: center;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-shadow: 4px 8px 12px;
+            box-shadow: 4px 8px 12px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  input {
+    color: black;
+    outline: none;
+    padding: 9px;
+    border: none;
+    border-bottom: 2px solid black;
+    background: none;
+    height: 4vh;
+    min-width: 40vw;
+    max-width: 44vw;
+    margin: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  select {
+    max-width: 33vw;
+    min-width: 30vw;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 4vh;
+    margin: 20px;
+  }
+}
+/*# sourceMappingURL=form.css.map */

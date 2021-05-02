@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="on">
+        <h2>Form Validation</h2>
+    </div>
+    <form action="next.html" onsubmit=" return val()">
+        <input type="text" placeholder="username" id="username">
+        <label id="label" style="display: none;">This field is empty</label>
+        <input type="email" placeholder="email" id="email" required>
+        <label id="labe" style="display: none;">This field is empty</label>
+        <select name="" id="election">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <input type="number" id="age" placeholder="age">
+        <label id="lab" style="display: none;">This field is empty</label>
+        <label id="ll" style="display: none;">Your are not allowed for resgisteration</label>
+        <input type="password" placeholder="password" id="pass">
+        <label id="la" style="display: none;">This field is empty</label>
+        <input type="password" placeholder="confirm password" id="c_pass">
+        <label id="l" style="display: none;">This field is empty</label>
+        <label id="ml" style="display: none;">Password doesn't matches to confirm password</label>
+        <input type="submit" id="sub">
+    </form>
+    <script>
+        function val() {
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var age = document.getElementById('age').value;
+            var pass = document.getElementById('pass').value;
+            var cpass = document.getElementById('c_pass').value;
+            if (username == "" || email == "" || age == "" || pass == "" || cpass == "") {
+                document.getElementById('label').style.display = 'block';
+                document.getElementById('label').style.color = 'red';
+                document.getElementById('labe').style.display = 'block';
+                document.getElementById('labe').style.color = 'red';
+                document.getElementById('lab').style.display = 'block';
+                document.getElementById('lab').style.color = 'red';
+                document.getElementById('la').style.display = 'block';
+                document.getElementById('la').style.color = 'red';
+                document.getElementById('l').style.display = 'block';
+                document.getElementById('l').style.color = 'red';
+
+                return false;
+            }
+            if (pass != cpass) {
+                document.getElementById('ml').style.display = 'block';
+                document.getElementById('ml').style.color = 'red';
+                return false;
+            }
+            if (age < 18) {
+
+                document.getElementById('ll').style.display = 'block';
+                document.getElementById('ll').style.color = 'red';
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>
